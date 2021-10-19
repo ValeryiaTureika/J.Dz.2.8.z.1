@@ -6,7 +6,6 @@ public class LikeManager {
 
     private Like[] likes;
 
-
     public Like[] getLikeGeneration() {
         // TODO: add logic
         return null;

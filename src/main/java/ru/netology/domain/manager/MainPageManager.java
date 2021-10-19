@@ -6,6 +6,8 @@ import ru.netology.domain.Like;
 import ru.netology.domain.Repost;
 import ru.netology.domain.UserActionRecord;
 import ru.netology.domain.ViewingRecord;
+import ru.netology.domain.Geo;
+import ru.netology.domain.PostSource;
 
 public class MainPageManager {
 
@@ -89,6 +91,20 @@ public class MainPageManager {
         // TODO: add logic
         for (ViewingRecord viewingRecord : viewingRecords) {
             Integer number = viewingRecord.getNumberViewingRecord();
+        }
+        return null;
+    }
+
+    private GeoManager geoManager;
+
+    /**
+     * Main Page generation
+     */
+    public String geo() {
+        Geo[] geos = geoManager.getGeo();
+        // TODO: add logic
+        for (Geo geo : geos) {
+            String geoGeneration = geo.getType();
         }
         return null;
     }

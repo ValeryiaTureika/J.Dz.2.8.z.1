@@ -2,11 +2,14 @@ package ru.netology.domain;
 
 public class Comment {
     private boolean leaveCommentRecord;
+    private boolean leaveCommunityCommentRecord;
     private int idAuthorCommentRecord;
     private int idTextCommentRecord;
     private int dataCommentRecord;
     private boolean filterInterestingFirstCommentField;
     private int numberComment;
+    private boolean canOpenComment;
+    private boolean canCloseComment;
 
     public boolean isLeaveCommentRecord() {
         return leaveCommentRecord;
@@ -14,6 +17,14 @@ public class Comment {
 
     public void setLeaveCommentRecord(boolean on) {
         this.leaveCommentRecord = on;
+    }
+
+    public boolean isLeaveCommunityCommentRecord() {
+        return leaveCommunityCommentRecord;
+    }
+
+    public void setLeaveCommunityCommentRecord(boolean on) {
+        this.leaveCommunityCommentRecord = on;
     }
 
     public int getIdAuthorCommentRecord() {

@@ -2,7 +2,7 @@ package ru.netology.domain;
 
 public class Repost {
     private int numberRepostRecord;
-    public boolean currentUserRepost;
+    private boolean currentUserRepost;
 
     public boolean isCurrentUserRepost() {
         return currentUserRepost;
