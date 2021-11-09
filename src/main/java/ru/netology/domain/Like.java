@@ -4,7 +4,7 @@ public class Like {
     private int numberLikedRecord;
     private boolean currentUserLike;
     private int canCurrentUserLike;
-    private int canPublish;
+    private boolean canPublish;
 
     public boolean isCurrentUserLike() {
         return currentUserLike;
@@ -30,11 +30,11 @@ public class Like {
         this.canCurrentUserLike = canCurrentUserLike;
     }
 
-    public int getCanPublish() {
+    public boolean isCanPublish() {
         return canPublish;
     }
 
-    public void setCanPublish(int canPublish) {
-        this.canPublish = canPublish;
+    public void setCanPublish(boolean on) {
+        this.canPublish = on;
     }
 }

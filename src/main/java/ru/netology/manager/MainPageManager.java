@@ -1,107 +1,77 @@
-package ru.netology.domain.manager;
+package ru.netology.manager;
 
 import ru.netology.domain.Comment;
-import ru.netology.domain.CommunityRecord;
+import ru.netology.domain.Post;
 import ru.netology.domain.Like;
 import ru.netology.domain.Repost;
 import ru.netology.domain.UserActionRecord;
 import ru.netology.domain.ViewingRecord;
 import ru.netology.domain.Geo;
-import ru.netology.domain.PostSource;
 
 public class MainPageManager {
 
-    private CommentManager commentManager;
+    private Manager manager;
 
     /**
      * Main Page generation
      */
+
     public Integer generatingComment() {
-        Comment[] comments = commentManager.getGeneratingComment();
+        Comment[] comments = manager.getGeneratingComment();
         // TODO: add logic
         for (Comment comment : comments) {
             Integer number = comment.getNumberComment();
         }
-        return null;
+        return 0;
     }
 
-    private CommunityRecordManager communityRecordManager;
-
-    /**
-     * Main Page generation
-     */
-    public String generate() {
-        CommunityRecord[] communityRecords = communityRecordManager.getPostGeneration();
+    public String postGenerate() {
+        Post[] posts = manager.getPostGeneration();
         // TODO: add logic
-        for (CommunityRecord communityRecord : communityRecords) {
-            String text = communityRecord.getText();
+        for (Post post : posts) {
+            String text = post.getText();
         }
         return null;
     }
 
-    private LikeManager likeManager;
-
-    /**
-     * Main Page generation
-     */
     public Integer likeGeneration() {
-        Like[] likes = likeManager.getLikeGeneration();
+        Like[] likes = manager.getLikeGeneration();
         // TODO: add logic
         for (Like like : likes) {
             Integer likeText = like.getNumberLikedRecord();
         }
-        return null;
+        return 0;
     }
 
-    private RepostManager repostManager;
-
-    /**
-     * Main Page generation
-     */
     public Integer repostGeneration() {
-        Repost[] reposts = repostManager.getGenerationRepost();
+        Repost[] reposts = manager.getGenerationRepost();
         // TODO: add logic
         for (Repost repost : reposts) {
             Integer repostText = repost.getNumberRepostRecord();
         }
-        return null;
+        return 0;
     }
 
-    private UserActionRecordManager userActionRecordManager;
-
-    /**
-     * Main Page generation
-     */
     public Boolean personalSettings() {
-        UserActionRecord[] userActionRecords = userActionRecordManager.getPersonalSettings();
+        UserActionRecord[] userActionRecords = manager.getPersonalSettings();
         // TODO: add logic
         for (UserActionRecord userActionRecord : userActionRecords) {
             Boolean settings = userActionRecord.isCurrentUserNotInterestingRecord();
         }
-        return null;
+        return false;
     }
 
-    private ViewingRecordManager viewingRecordManager;
-
-    /**
-     * Main Page generation
-     */
     public Integer viewRecord() {
-        ViewingRecord[] viewingRecords = viewingRecordManager.getView();
+        ViewingRecord[] viewingRecords = manager.getView();
         // TODO: add logic
         for (ViewingRecord viewingRecord : viewingRecords) {
             Integer number = viewingRecord.getNumberViewingRecord();
         }
-        return null;
+        return 0;
     }
 
-    private GeoManager geoManager;
-
-    /**
-     * Main Page generation
-     */
     public String geo() {
-        Geo[] geos = geoManager.getGeo();
+        Geo[] geos = manager.getGeo();
         // TODO: add logic
         for (Geo geo : geos) {
             String geoGeneration = geo.getType();

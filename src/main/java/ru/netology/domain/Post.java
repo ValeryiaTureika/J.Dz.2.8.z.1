@@ -1,6 +1,6 @@
 package ru.netology.domain;
 
-public class CommunityRecord {
+public class Post {
     private String text;
     private int idRecord;
     private int idSocialNetwork;
