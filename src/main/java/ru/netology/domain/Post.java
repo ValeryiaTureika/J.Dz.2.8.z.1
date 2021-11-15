@@ -1,21 +1,124 @@
 package ru.netology.domain;
 
 public class Post {
+    private int id;
+    private int ownerId;
+    private int fromId;
+    private int createdBy;
+    private int data;
     private String text;
-    private int idRecord;
-    private int idSocialNetwork;
-    private int idAuthorRecord;
-    private int idAdministrator;
-    private int dataRecord;
-    private int idRecordBasedNewRecord;
-    private int idAuthorRecordBasedNewRecord;
-    private int friendsOnlyRecord;
-    private String typeMediaFileRecord;
-    private int idSigner;
-    private int copyHistory;
-    private int isPinned;
-    private int markedAsAds;
-    private int idPostponed;
+    private int replyOwnerId;
+    private int replyPostId;
+    private boolean friendsOnly;
+    private CommentsInfo commentsInfo;
+    private Copyright copyright;
+    private LikesInfo likesInfo;
+    private RepostsInfo repostsInfo;
+    private Views views;
+    private Geo geo;
+    private int signerId;
+    private boolean canPin;
+    private boolean canDelete;
+    private boolean canEdit;
+    private boolean isPinned;
+    private boolean markedAsAds;
+    private boolean isFavorite;
+
+    public boolean isCanPin() {
+        return canPin;
+    }
+
+    public void setCanPin(boolean canPin) {
+        this.canPin = canPin;
+    }
+
+    public boolean isCanDelete() {
+        return canDelete;
+    }
+
+    public void setCanDelete(boolean canDelete) {
+        this.canDelete = canDelete;
+    }
+
+    public boolean isCanEdit() {
+        return canEdit;
+    }
+
+    public void setCanEdit(boolean canEdit) {
+        this.canEdit = canEdit;
+    }
+
+    public boolean isPinned() {
+        return isPinned;
+    }
+
+    public void setPinned(boolean pinned) {
+        isPinned = pinned;
+    }
+
+    public boolean isMarkedAsAds() {
+        return markedAsAds;
+    }
+
+    public void setMarkedAsAds(boolean markedAsAds) {
+        this.markedAsAds = markedAsAds;
+    }
+
+    public boolean isFavorite() {
+        return isFavorite;
+    }
+
+    public void setFavorite(boolean favorite) {
+        isFavorite = favorite;
+    }
+
+    public int getSignerId() {
+        return signerId;
+    }
+
+    public void setSignerId(int signerId) {
+        this.signerId = signerId;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public int getOwnerId() {
+        return ownerId;
+    }
+
+    public void setOwnerId(int ownerId) {
+        this.ownerId = ownerId;
+    }
+
+    public int getFromId() {
+        return fromId;
+    }
+
+    public void setFromId(int fromId) {
+        this.fromId = fromId;
+    }
+
+    public int getCreatedBy() {
+        return createdBy;
+    }
+
+    public void setCreatedBy(int createdBy) {
+        this.createdBy = createdBy;
+    }
+
+    public int getData() {
+        return data;
+    }
+
+    public void setData(int data) {
+        this.data = data;
+    }
 
     public String getText() {
         return text;
@@ -25,115 +128,75 @@ public class Post {
         this.text = text;
     }
 
-    public int getIdRecord() {
-        return idRecord;
+    public int getReplyOwnerId() {
+        return replyOwnerId;
     }
 
-    public void setIdRecord(int idRecord) {
-        this.idRecord = idRecord;
+    public void setReplyOwnerId(int replyOwnerId) {
+        this.replyOwnerId = replyOwnerId;
     }
 
-    public int getIdSocialNetwork() {
-        return idSocialNetwork;
+    public int getReplyPostId() {
+        return replyPostId;
     }
 
-    public void setIdSocialNetwork(int idSocialNetwork) {
-        this.idSocialNetwork = idSocialNetwork;
+    public void setReplyPostId(int replyPostId) {
+        this.replyPostId = replyPostId;
     }
 
-    public int getDataRecord() {
-        return dataRecord;
+    public boolean isFriendsOnly() {
+        return friendsOnly;
     }
 
-    public void setDataRecord(int dataRecord) {
-        this.dataRecord = dataRecord;
+    public void setFriendsOnly(boolean friendsOnly) {
+        this.friendsOnly = friendsOnly;
     }
 
-    public int getIdRecordBasedNewRecord() {
-        return idRecordBasedNewRecord;
+    public CommentsInfo getCommentsInfo() {
+        return commentsInfo;
     }
 
-    public void setIdRecordBasedNewRecord(int idRecordBasedNewRecord) {
-        this.idRecordBasedNewRecord = idRecordBasedNewRecord;
+    public void setCommentsInfo(CommentsInfo commentsInfo) {
+        this.commentsInfo = commentsInfo;
     }
 
-    public int getIdAuthorRecordBasedNewRecord() {
-        return idAuthorRecordBasedNewRecord;
+    public Copyright getCopyright() {
+        return copyright;
     }
 
-    public void setIdAuthorRecordBasedNewRecord(int idAuthorRecordBasedNewRecord) {
-        this.idAuthorRecordBasedNewRecord = idAuthorRecordBasedNewRecord;
+    public void setCopyright(Copyright copyright) {
+        this.copyright = copyright;
     }
 
-    public int getIdAdministrator() {
-        return idAdministrator;
+    public LikesInfo getLikesInfo() {
+        return likesInfo;
     }
 
-    public void setIdAdministrator(int idAdministrator) {
-        this.idAdministrator = idAdministrator;
+    public void setLikesInfo(LikesInfo likesInfo) {
+        this.likesInfo = likesInfo;
     }
 
-    public int getIdAuthorRecord() {
-        return idAuthorRecord;
+    public RepostsInfo getRepostsInfo() {
+        return repostsInfo;
     }
 
-    public void setIdAuthorRecord(int idAuthorRecord) {
-        this.idAuthorRecord = idAuthorRecord;
+    public void setRepostsInfo(RepostsInfo repostsInfo) {
+        this.repostsInfo = repostsInfo;
     }
 
-    public int getFriendsOnlyRecord() {
-        return friendsOnlyRecord;
+    public Views getViews() {
+        return views;
     }
 
-    public void setFriendsOnlyRecord(int friendsOnlyRecord) {
-        this.friendsOnlyRecord = friendsOnlyRecord;
+    public void setViews(Views views) {
+        this.views = views;
     }
 
-    public String getTypeMediaFileRecord() {
-        return typeMediaFileRecord;
+    public Geo getGeo() {
+        return geo;
     }
 
-    public void setTypeMediaFileRecord(String typeMediaFileRecord) {
-        this.typeMediaFileRecord = typeMediaFileRecord;
-    }
-
-    public int getIdSigner() {
-        return idSigner;
-    }
-
-    public void setIdSigner(int idSigner) {
-        this.idSigner = idSigner;
-    }
-
-    public int getCopyHistory() {
-        return copyHistory;
-    }
-
-    public void setCopyHistory(int copyHistory) {
-        this.copyHistory = copyHistory;
-    }
-
-    public int getIsPinned() {
-        return isPinned;
-    }
-
-    public void setIsPinned(int isPinned) {
-        this.isPinned = isPinned;
-    }
-
-    public int getMarkedAsAds() {
-        return markedAsAds;
-    }
-
-    public void setMarkedAsAds(int markedAsAds) {
-        this.markedAsAds = markedAsAds;
-    }
-
-    public int getIdPostponed() {
-        return idPostponed;
-    }
-
-    public void setIdPostponed(int idPostponed) {
-        this.idPostponed = idPostponed;
+    public void setGeo(Geo geo) {
+        this.geo = geo;
     }
 }
